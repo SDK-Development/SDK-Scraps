@@ -1,5 +1,3 @@
- Fa# SDK-Scraps
-
 ## Description
 SDK-Scraps is a FiveM script that allows players to search for scraps and sell them to an NPC. The script is compatible with both ESX and QBCore frameworks.
 
