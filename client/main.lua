@@ -165,7 +165,9 @@ spawnObjects = function()
                 1.0, 1.0, 1.0,
                 Config.MarkerSettings.Color.r, Config.MarkerSettings.Color.g, Config.MarkerSettings.Color.b, Config.MarkerSettings.Color.a,
                 Config.MarkerSettings.Bouncing, true, 2, false,
-                nil, nil, false
+                nil, -- STREAM DIRECTORY 
+                nil, -- TEXTURE
+                false
             )
         end
 
