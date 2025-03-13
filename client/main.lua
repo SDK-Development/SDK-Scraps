@@ -246,6 +246,7 @@ doProgress = function(duration, dict, clip, prop)
     return lib.progressCircle({
         duration = duration or Config.SearchTime,
         position = 'bottom',
+        label = Config.Messages.SEARCHING_SCRAPS,
         useWhileDead = false,
         canCancel = true,
         disable = {

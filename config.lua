@@ -38,6 +38,7 @@ Config.Messages = {
   STOP_WORKING = 'Stop Working',
   SELL_ITEMS = 'Sell Items',
   SEARCH = 'Search Scraps',
+  SEARCHING_SCRAPS = 'Searching Scraps',
   ITEM_FOUND = 'You found an item!',
   ITEMS_SOLD = "You sold items your scraps!",
   NO_ITEMS_TO_SELL = "You don't have any items to sell",
