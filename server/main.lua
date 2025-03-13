@@ -13,13 +13,13 @@ lib.callback.register('sdk-recycling:server:stopWork', function(source)
 end)
 
 lib.callback.register('sdk-recycling:server:searchObject', function(source)
-    if not Working[source] then 
+    if not Working[source] then
         Debug('Player not working:', source)
-        return false 
+        return false
     end
 
     local Player = Framework == 'ESX' and ESX.GetPlayerFromId(source) or QBCore.Functions.GetPlayer(source)
-    if not Player then 
+    if not Player then
         Debug('Player not found:', source)
         return false 
     end
@@ -87,8 +87,10 @@ lib.callback.register('sdk-recycling:server:sellItems', function(source)
     if itemsSold then
         Debug('Adding money to player:', totalMoney)
         if Framework == 'ESX' then
+            Debug('Adding money to player via ESX, MONEY:', totalMoney)
             Player.addMoney(totalMoney)
         else
+            Debug('Adding money to player via QBCore, MONEY:', totalMoney)
             Player.Functions.AddMoney('cash', totalMoney)
         end
         return true, totalMoney
