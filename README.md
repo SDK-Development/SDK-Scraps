@@ -32,6 +32,7 @@ Edit the `config.lua` file to customize the script settings:
 3. Sell the found items to the NPC.
 
 ## Dependencies
+* ESX or QBCore (You can also edit the code to support your own Framework, however, do this at your own risks.)
 * ox_lib
 * oxmysql
 
