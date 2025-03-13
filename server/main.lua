@@ -52,9 +52,9 @@ lib.callback.register('sdk-recycling:server:sellItems', function(source)
     end
 
     local Player = Framework == 'ESX' and ESX.GetPlayerFromId(source) or QBCore.Functions.GetPlayer(source)
-    if not Player then 
+    if not Player then
         Debug('Player not found:', source)
-        return false 
+        return false
     end
 
     local totalMoney = 0
@@ -81,6 +81,11 @@ lib.callback.register('sdk-recycling:server:sellItems', function(source)
             else
                 Player.Functions.RemoveItem(item.name, itemCount)
             end
+
+            lib.callback.await('sdk-recycling:client:showNotification', source, Config.Messages.ITEMS_SOLD)
+        else
+            lib.callback.await('sdk-recycling:client:showNotification', source, Config.Messages.NO_ITEMS_TO_SELL)
+            Debug("Player " .. source .. " has no " .. item.name .. " to sell.")
         end
     end
 
