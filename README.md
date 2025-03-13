@@ -1,3 +1,6 @@
+## PREVIEW
+https://youtu.be/nXaYP4sPqVg
+
 ## Description
 SDK-Scraps is a FiveM script that allows players to search for scraps and sell them to an NPC. The script is compatible with both ESX and QBCore frameworks.
 
@@ -35,6 +38,10 @@ Edit the `config.lua` file to customize the script settings:
 * ESX or QBCore (You can also edit the code to support your own Framework, however, do this at your own risks.)
 * ox_lib
 * oxmysql
+
+## Getting Help
+If you need support, feel free to open a Ticket in the discord:
+https://discord.gg/gHvYZfQy7d
 
 ## Contribution
 Every issues reported/pull request is appreciated; however when contributing make sure to include one of these tags here (in the commits/issue name) to help us address the issue better!
