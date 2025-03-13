@@ -128,7 +128,6 @@ end
 spawnObjects = function()
     for i, objectLocation in ipairs(Config.ObjectPossibleLocations) do
         local randomObject = Config.Objects[math.random(#Config.Objects)]
-        
         Debug('Spawning object:', randomObject .. " with ID: " .. i)
 
         local object = CreateObject(randomObject, 
