@@ -41,7 +41,7 @@ Every issues reported/pull request is appreciated; however when contributing mak
 - (feat) Use this one instead when adding (or suggesting) to new features!
 - (refactor) Use this last one when you didn't actually fixed any bug, just changed the general structure of the code.
 
-Thanks <3
+Thanks for your contribution! 💘
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
