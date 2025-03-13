@@ -19,7 +19,3 @@ Debug = function(...)
   if not Config.Debug then return end
   print('^3[SDK-Recycling]^7', ...)
 end
-
-GetMessage = function(message)
-  return Config.Messages[message]
-end
