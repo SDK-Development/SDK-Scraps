@@ -70,11 +70,12 @@ lib.callback.register('sdk-recycling:server:sellItems', function(source)
             local inventoryItem = Player.Functions.GetItemByName(item.name)
             itemCount = inventoryItem and inventoryItem.amount or 0
         end
-            
+
         if itemCount > 0 then
             local itemValue = (item.sellPrice or 0) * itemCount
             totalMoney = totalMoney + itemValue
             itemsSold = true
+            
             
             if Framework == 'ESX' then
                 Player.removeInventoryItem(item.name, itemCount)
@@ -82,14 +83,15 @@ lib.callback.register('sdk-recycling:server:sellItems', function(source)
                 Player.Functions.RemoveItem(item.name, itemCount)
             end
 
-            lib.callback.await('sdk-recycling:client:showNotification', source, Config.Messages.ITEMS_SOLD)
+
         else
-            lib.callback.await('sdk-recycling:client:showNotification', source, Config.Messages.NO_ITEMS_TO_SELL)
             Debug("Player " .. source .. " has no " .. item.name .. " to sell.")
         end
     end
 
     if itemsSold then
+        lib.callback.await('sdk-recycling:client:showNotification', source, Config.Messages.ITEMS_SOLD)
+        shownNotification = true
         Debug('Adding money to player:', totalMoney)
         if Framework == 'ESX' then
             Debug('Adding money to player via ESX, MONEY:', totalMoney)

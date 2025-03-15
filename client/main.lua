@@ -33,12 +33,7 @@ local changeWorkingState = function ()
             label = Config.Messages.SELL_ITEMS,
             icon = "fa-solid fa-dollar-sign",
             onSelect = function()
-                local success = lib.callback.await('sdk-recycling:server:sellItems')
-                if success then
-                    Notification(Config.Messages.ITEMS_SOLD)
-                else
-                    Notification(Config.Messages.NO_ITEMS_TO_SELL)
-                end
+                lib.callback.await('sdk-recycling:server:sellItems')
             end
         }
     })
