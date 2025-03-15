@@ -91,7 +91,6 @@ lib.callback.register('sdk-recycling:server:sellItems', function(source)
 
     if itemsSold then
         lib.callback.await('sdk-recycling:client:showNotification', source, Config.Messages.ITEMS_SOLD)
-        shownNotification = true
         Debug('Adding money to player:', totalMoney)
         if Framework == 'ESX' then
             Debug('Adding money to player via ESX, MONEY:', totalMoney)
